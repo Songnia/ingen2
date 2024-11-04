@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion Financière</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Application de Gestion Financière</h1>
+    
+    <!-- Formulaire pour ajouter une nouvelle activité -->
+    <section>
+        <h2>Ajouter une activité</h2>
+        <form id="activityForm">
+            <label for="activityName">Nom de l'activité :</label>
+            <input type="text" id="activityName" required>
+            
+            <label for="monthlyIncome">Revenu mensuel :</label>
+            <input type="number" id="monthlyIncome" required>
+            
+            <label for="monthlySavings">Épargne mensuelle :</label>
+            <input type="number" id="monthlySavings" required>
+            
+            <button type="submit">Ajouter l'activité</button>
+        </form>
+    </section>
+
+    <!-- Formulaire pour ajouter des dépenses -->
+    <section>
+      <h2>Ajouter une dépense</h2>
+      <form id="expenseForm">
+          <label for="expenseActivity">Activité :</label>
+          <select id="expenseActivity"></select>
+          
+          <label for="expenseCategory">Catégorie :</label>
+
+          <button type="button" id="addCategoryButton">Ajouter une nouvelle catégorie</button>
+          <input type="text" id="newCategoryInput" placeholder="Nouvelle catégorie" style="display: none;">
+
+          <select id="expenseCategory"></select>
+                    
+          <label for="expenseAmount">Montant :</label>
+          <input type="number" id="expenseAmount" required>
+          
+          <label for="expenseDate">Date :</label>
+          <input type="date" id="expenseDate" required>
+          
+          <button type="submit">Ajouter la dépense</button>
+      </form>
+  </section>  
+
+    <!-- Tableau pour afficher les activités et les dépenses -->
+    <section class="table-container" >
+        <h2>Activités et Dépenses</h2>
+        <table id="dataDisplay">
+            <thead>
+                <tr>
+                    <th>Nom de l'activité</th>
+                    <th>Mois</th>
+                    <th>Revenu mensuel</th>
+                    <th>Épargne mensuelle</th>
+                    <th>Catégorie</th>
+                    <th>Date de la dépense</th>
+                    <th>Montant de la dépense</th>
+                    <th>Total des Dépenses</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Les données seront insérées ici par JavaScript -->
+            </tbody>
+        </table>
+    </section>
+  </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
